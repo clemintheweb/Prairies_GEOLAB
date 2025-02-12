@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Site GEOLAB</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="http://localhost:8000/VGA.js"></script>
+    <link rel="stylesheet" href="http://localhost:8000/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+</head>
+<body>
+<div id="header" class="content">
+    <h1 id="boxplots">Cartographies des prairies à hautes valeurs environnementales</h1>
+    <h2 id="tuto">Apport des séries temporelles d’images satellitaires à haute résolution spatiale.</h2>
+
+<div class="boutons-container">
+        <a id="LinkBouton" class="common-button" href="https://seafile.unistra.fr/d/04c141980a1b466c9167/">lien vers le dossier d'étude</a>
+        <a id="InfoBouton" class="common-button" href="#">présentation des données affichées</a>
+
+
+
+    <div id="date-selector">
+        <label for="year">choix de la donnée :</label>
+        <select id="year" onchange="updateYear()">
+            <option value="2019">2019</option>
+            <option value="2022">2022</option>
+            <option value="evo">évolution 2019-2022</option>
+        </select>
+    </div>
+</div>
+
+    <!-- Info-controls après -->
+<div id="info-controls">
+<span id="Info" class="content">
+    <p class="p1">La classification des prairies en fonction de leurs valeurs environnementales en 2019 et 2022</p>
+    <p class="p2">Les prairies sont classées entre qualité environnementale mauvaise, moyenne et bonne</p>
+    <p class="p1">L'évolution des classes des prairies entre 2019 et 2022</p>
+    <p class="p2">Les prairies sont classées entre évolution négative, positive et stabilité</p>
+</span>
+
+</div>
+
+</div>
+
+    <div id="fond_de_carte" class="content"></div>
+    <div id="footer">
+        <p>GEOLAB Master 2 OTG [2024-25]</p>
+        <div class="logos">
+            <img src="logo_fac.png" alt="Logo Université" class="footer-logo">
+            <img src="logo_master.png" alt="Logo Master" class="footer-logo">
+        </div>
+    </div>
+</body>
+</html>
