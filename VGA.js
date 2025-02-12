@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ======================== CHARGEMENT DU GEOJSON ========================
 function loadGeoJSON() {
-    fetch("http://localhost:8000/parcelles_evo.geojson")
+    fetch("parcelles_evo.geojson")
         .then((response) => {
             if (!response.ok) throw new Error("Erreur réseau : Impossible de récupérer le fichier GeoJSON.");
             return response.json();
